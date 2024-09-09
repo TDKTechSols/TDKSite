@@ -1,6 +1,6 @@
 /**
  * Social Likes
- * http://sapegin.github.com/social-likes
+ * https://sapegin.github.com/social-likes
  *
  * Sharing buttons for Russian and worldwide social networks.
  *
@@ -96,7 +96,7 @@
         },
         odnoklassniki: {
             // HTTPS not supported
-            counterUrl: isHttps ? undefined : 'http://connect.ok.ru/dk?st.cmd=extLike&ref={url}&uid={index}',
+            counterUrl: isHttps ? undefined : 'https://connect.ok.ru/dk?st.cmd=extLike&ref={url}&uid={index}',
             counter: function(jsonUrl, deferred) {
                 var options = services.odnoklassniki;
                 if (!options._) {
@@ -112,13 +112,13 @@
                 $.getScript(makeUrl(jsonUrl, {index: index}))
                     .fail(deferred.reject);
             },
-            popupUrl: 'http://connect.ok.ru/dk?st.cmd=WidgetSharePreview&service=odnoklassniki&st.shareUrl={url}',
+            popupUrl: 'https://connect.ok.ru/dk?st.cmd=WidgetSharePreview&service=odnoklassniki&st.shareUrl={url}',
             popupWidth: 550,
             popupHeight: 360
         },
         plusone: {
-            // HTTPS not supported yet: http://clubs.ya.ru/share/1499
-            counterUrl: isHttps ? undefined : 'http://share.yandex.ru/gpp.xml?url={url}',
+            // HTTPS not supported yet: https://clubs.ya.ru/share/1499
+            counterUrl: isHttps ? undefined : 'https://share.yandex.ru/gpp.xml?url={url}',
             counter: function(jsonUrl, deferred) {
                 var options = services.plusone;
                 if (options._) {
